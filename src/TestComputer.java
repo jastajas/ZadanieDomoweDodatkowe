@@ -8,7 +8,14 @@ public class TestComputer {
         Memory memory2 = new Memory("GoodRAM", "Iridium",2400, 8);
         Computer computer2 = new Computer("Dell",procesor2, memory2);
 
+        Overclock overclock = new Overclock();
+
         computer1.showComputerParameters();
+        overclock.decreaseCpuClock(computer1, 300);
+        computer1.showComputerParameters();
+
+        computer2.showComputerParameters();
+        overclock.increaseCpuClock(computer2,700);
         computer2.showComputerParameters();
     }
 }
