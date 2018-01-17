@@ -1,6 +1,6 @@
 public class TestComputer {
     public static void main(String[] args) {
-        Procesor procesor1 = new Procesor("Intel", "Core", 4200);
+        /*Procesor procesor1 = new Procesor("Intel", "Core", 4200);
         Memory memory1 = new Memory("Kingston", "HyperX",1866, 4);
         Computer computer1 = new Computer("Lenovo",procesor1, memory1);
 
@@ -16,6 +16,15 @@ public class TestComputer {
 
         computer2.showComputerParameters();
         overclock.increaseCpuClock(computer2,700);
+        computer2.showComputerParameters();*/
+
+
+        ComputerAssembly computerAssembly = new ComputerAssembly();
+
+        Computer computer1 = computerAssembly.assembly(new Computer("Lenovo", new Procesor("Intel", "Core", 4200), new Memory("Kingston", "HyperX",1866, 4)));
+        computer1.showComputerParameters();
+
+        Computer computer2 = computerAssembly.assembly(new Computer("Dell", new Procesor("AMD", "Ryzen", 3400), new Memory("GoodRAM", "Iridium",2400, 8)));
         computer2.showComputerParameters();
     }
 }
