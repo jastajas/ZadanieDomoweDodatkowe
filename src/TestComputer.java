@@ -21,10 +21,16 @@ public class TestComputer {
 
         ComputerAssembly computerAssembly = new ComputerAssembly();
 
-        Computer computer1 = computerAssembly.assembly(new Computer("Lenovo", new Procesor("Intel", "Core", 4200), new Memory("Kingston", "HyperX",1866, 4)));
+        /*Computer computer1 = computerAssembly.assembly(new Computer("Lenovo", new Procesor("Intel", "Core", 4200), new Memory("Kingston", "HyperX",1866, 4)));
         computer1.showComputerParameters();
 
         Computer computer2 = computerAssembly.assembly(new Computer("Dell", new Procesor("AMD", "Ryzen", 3400), new Memory("GoodRAM", "Iridium",2400, 8)));
+        computer2.showComputerParameters();*/
+
+        Computer computer1 = computerAssembly.assembly("Lenovo","Intel", "Core", 4200,"Kingston", "HyperX",1866, 4);
+        computer1.showComputerParameters();
+
+        Computer computer2 = computerAssembly.assemblyShort("Dell", new Procesor("AMD", "Ryzen", 3400), new Memory("GoodRAM", "Iridium",2400, 8));
         computer2.showComputerParameters();
     }
 }
